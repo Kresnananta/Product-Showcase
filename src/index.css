@@ -25,13 +25,11 @@
 }
 
 :root {
-  --gradient-color: linear-gradient(
-    to bottom right,
-    #0894ff 0%,
-    #c959dd 34%,
-    #ff2e54 68%,
-    #ff9004
-  );
+  --gradient-color: linear-gradient(to bottom right,
+      #0894ff 0%,
+      #c959dd 34%,
+      #ff2e54 68%,
+      #ff9004);
 }
 
 @theme {
@@ -46,13 +44,10 @@
 }
 
 html {
-  width: 100vw;
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  width: 100vw;
   overflow-x: hidden;
   background-color: #000;
   color: var(--color-dark-100);
@@ -113,22 +108,22 @@ body {
   }
 
   #hero {
-    @apply h-fit lg:h-[80vh] col-center mt-40 lg:mt-20 2xl:mt-[7vh];
+    @apply h-fit lg:h-[90vh] col-center mt-40 lg:mt-24;
 
     div {
-      @apply relative z-10 col-center lg:translate-y-16;
+      @apply relative z-10 col-center lg:translate-y-10;
 
       h1 {
         @apply font-semibold lg:text-3xl 2xl:text-5xl text-white;
       }
 
       img {
-        @apply container mx-auto w-2/3;
+        @apply container mx-auto w-1/2;
       }
     }
 
     video {
-      @apply mx-auto lg:translate-y-5 2xl:translate-y-0;
+      @apply mx-auto lg:translate-y-2 pointer-events-none;
     }
 
     button {
@@ -136,15 +131,15 @@ body {
     }
 
     p {
-      @apply lg:h3-semibold base-semibold;
+      @apply lg:h3-semibold base-semibold z-10;
     }
   }
 
   #product-viewer {
-    @apply container relative min-h-[93vh] mx-auto px-5 2xl:px-0 mt-40;
+    @apply container relative min-h-[93vh] mx-auto px-5 2xl:px-0 mt-40 ml-10;
 
     h2 {
-      @apply text-white font-semibold text-3xl lg:text-6xl;
+      @apply text-white font-semibold text-3xl lg:text-6xl z-10;
     }
 
     .controls {
@@ -176,7 +171,7 @@ body {
     }
 
     #canvas {
-      @apply !w-full !h-[80vh] lg:!h-dvh relative z-40;
+      @apply !w-full !h-[80vh] lg:h-dvh! relative z-40;
     }
   }
 
@@ -339,12 +334,15 @@ body {
         p {
           @apply font-semibold text-4xl max-w-2xs;
         }
+
         .apple-gradient {
           @apply p-10 rounded-3xl flex items-center gap-7 relative;
 
           background: #1d1d1f;
-          background-clip: padding-box; /* !important */
-          border: 3px solid transparent; /* !important */
+          background-clip: padding-box;
+          /* !important */
+          border: 3px solid transparent;
+          /* !important */
 
           ::before {
             content: "";
@@ -352,28 +350,26 @@ body {
             position: absolute;
             inset: 0px;
             z-index: -1;
-            margin: -5px; /* !important */
-            border-radius: 24px; /* !important */
-            background: linear-gradient(
-              91deg,
-              #0096ff 0%,
-              #bb64ff 42%,
-              #f2416b 74%,
-              #eb7500 100%
-            );
+            margin: -5px;
+            /* !important */
+            border-radius: 24px;
+            /* !important */
+            background: linear-gradient(91deg,
+                #0096ff 0%,
+                #bb64ff 42%,
+                #f2416b 74%,
+                #eb7500 100%);
           }
 
           p {
             @apply font-semibold lg:text-2xl 2xl:text-3xl;
 
             span {
-              background: linear-gradient(
-                91deg,
-                #0096ff 0%,
-                #bb64ff 42%,
-                #f2416b 74%,
-                #eb7500 100%
-              );
+              background: linear-gradient(91deg,
+                  #0096ff 0%,
+                  #bb64ff 42%,
+                  #f2416b 74%,
+                  #eb7500 100%);
               background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
