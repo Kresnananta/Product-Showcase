@@ -1,16 +1,47 @@
-# React + Vite
+# Product Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-88CE02?style=flat&logo=greensock&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-4A4A55?style=flat)
+![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=flat)
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Product Showcase is an interactive 3D web application built to display Apple product (curently just macbook pro M3 14" and 16").
 
-## React Compiler
+Users can smoothly interact with the product by rotating the models, dynamically swapping between device sizes, and altering the product colors in real-time.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- 3D Model Rendering: High-quality rendering of MacBook models using `@react-three/fiber` and `@react-three/drei`.
+- Interactive Controls: Smooth, spring-based drag and presentation controls.
+- Dynamic State Management: Real-time toggling of device colors and sizes managed by `zustand`.
+- Fluid Animations: Seamless transitions and fading effects between models powered by `gsap`.
+- Performance Optimized: Invisible meshes are dynamically removed from the rendering pass to maintain high frame rates on all devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
+npm run dev
+```
+
+## Build
+
+To build the application for production:
+
+```bash
+npm run build
+```
+This will generate the optimized static assets in the `dist` directory.
+
+## Resources
+- GLTF Models were compressed and processed using `npx gltfjsx [model.glb] -T` (Draco compression).
